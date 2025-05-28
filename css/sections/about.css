@@ -1,0 +1,104 @@
+.about-us {
+    display: flex;
+    min-height: 720px;
+    overflow: hidden;
+}
+
+.about-us__image{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+
+    background: var(--color-white);
+
+    position: relative;
+}
+
+.about-us__image div{
+    padding: 32px 64px;
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    background-position: center;
+    /*The background image is displayed only once and does not repeat in the container*/
+    background-repeat: no-repeat;
+    /*Without cropping or stretching, scale the background image to fit the container completely, 
+      maintaining the original proportions.*/
+    background-size: contain;
+
+}
+
+.about-us__image-sushi3{
+    /*Add an 8-pixel thick, 
+    solid border to the bottom of the element, with the color set to our custom variable*/
+    border-bottom: 8px solid var(--color-creamson);
+    background-image: url("../../assets/about_bg1.png");
+}
+
+.about-us__image-sushi2{
+    background-image: url("../../assets/about_bg2.png");
+}
+
+.about-us__image-sushi3 img{
+    width: 225px;
+    height: 200px;
+}
+
+.about-us__image-sushi2 img{
+    width: 240px;
+    height: 160px;
+}
+
+.about-us__button{
+    position: absolute;
+    right: 0;
+    
+    /*
+    1. Control spacing between elements	   margin	  Gap between two cards, space to the right of a button
+    2. Control padding between content and edge	   padding	  Text not sticking to the edge, expanding clickable area of a button
+    3. Align element to the right or fix it	   right + position	   Back-to-top button in bottom-right corner, close icon aligned to right
+    */
+    padding: 12px 32px;
+    min-height: 64px;
+
+    background: var(--secondary-color);
+    border-radius: 32px 0 0 32px;
+    /*To simply remove the border (button/input box):  border: none;
+      To remove the focus outline (custom buttons/forms):  outline: none;
+      
+      Differnce: border: 0; vs border: none;
+      border: 0;	Set border width to 0 (= no border)   Numeric unit value, indicating border width is 0;
+      border: none;	Set the border style to none (i.e. no border)   Border style type, disable all border styles;
+    
+      Difference: outline: 0; vs outline: none;
+      outline: 0;	Outline width is 0 (outline cannot be seen) 
+      outline: none;	Disable all outline styles;
+      */
+    border: 0;
+    outline: 0;
+
+    color: #fff;
+    font-family: var(--plus-jakarta-sans);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+
+    cursor: pointer;
+}
+
+.about-us__button img{
+    object-fit: contain;
+    margin-left: 32px;
+}
+
+.about-us__content{
+    padding: 64px;
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
